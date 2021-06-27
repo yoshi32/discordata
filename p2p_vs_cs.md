@@ -115,7 +115,7 @@ Im Postfach findest du nun die E-Mail.
 
 Baue zuerst ein P2P-Netzwerk auf (siehe Abbildung).
 
-![Aufbau des P2P-Netwerkes in Filius](aufbau_p2p.png)
+![Aufbau des P2P-Netwerkes in Filius](bilder/aufbau_p2p.png)
 
 Installiere nun auf A und B Gnutella sowie den Text-Editor auf A. Öffne den Text-Editor und schreibe einen kurzen Text.
 
