@@ -1,0 +1,50 @@
+@font-face {
+    src: url('Uni-Sans-Heavy.otf');
+}
+
+.uni-sans-heavy {
+    -fx-font-family: 'Uni Sans Heavy CAPS';
+    -fx-text-fill: #ffffff;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-size: 50;
+    -fx-background-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: #5c6fb1;
+}
+
+.button:pressed {
+    -fx-background-color: #4e5d94;
+}
+
+.main-button {
+    -fx-border-style: segments(10, 10);
+    -fx-font-size: 30;
+    -fx-background-color: #2f3136;
+}
+
+.main-button:hover {
+    -fx-background-color: #34373c;
+}
+
+.main-button:pressed {
+    -fx-background-color: #37393f;
+}
+
+.exit-button:hover {
+    -fx-background-color: #f04747;
+}
+
+.exit-button:pressed {
+    -fx-background-color: #be3537;
+}
+
+.checkbox {
+    -fx-font-family: 'Whitney';
+    -fx-text-fill: #ffffff;
+    -fx-padding: 0 0 0 10;
+}

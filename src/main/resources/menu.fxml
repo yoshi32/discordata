@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefWidth="600.0" style="-fx-background-color: #36393f;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.yoshi32.discordata.MenuController">
+   <HBox prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #7289DA;">
+      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@discordata.png" />
+      </ImageView>
+      <Label prefHeight="50.0" prefWidth="450.0" style="-fx-font-size: 40;" styleClass="uni-sans-heavy" stylesheets="@style.css" text="Discordata" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onMouseClicked="#onMiniButtonMouseClicked" prefHeight="50.0" prefWidth="50.0" style="-fx-graphic: url(file:///C:/Users/Yannick/IdeaProjects/discordata/src/main/resources/mini.png); -fx-font-size: 0;" stylesheets="@style.css">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" onMouseClicked="#onExitButtonMouseClicked" prefHeight="50.0" prefWidth="50.0" style="-fx-graphic: url(file:///C:/Users/Yannick/IdeaProjects/discordata/src/main/resources/exit.png); -fx-font-size: 0;" styleClass="exit-button" stylesheets="@style.css">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets />
+         </padding>
+      </Button>
+   </HBox>
+   <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #7289da; -fx-border-width: 0 1px 1px 1px;">
+      <Button fx:id="mainButton" layoutX="100.0" layoutY="150.0" mnemonicParsing="false" onDragDropped="#onMainButtonDragDropped" onDragOver="#onMainButtonDragOver" onMouseClicked="#onMainButtonMouseClicked" prefHeight="200.0" prefWidth="400.0" style="-fx-border-color: #7289DA;" stylesheets="@style.css" text="Drag'n'Drop or click to select JSON file." textAlignment="CENTER" wrapText="true">
+         <styleClass>
+            <String fx:value="uni-sans-heavy" />
+            <String fx:value="main-button" />
+         </styleClass>
+      </Button>
+      <VBox layoutX="100.0" layoutY="25.0" prefHeight="100.0" prefWidth="400.0">
+         <CheckBox mnemonicParsing="false" prefHeight="50.0" prefWidth="400.0" styleClass="checkbox" stylesheets="@style.css" text="Count all events">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="50.0" prefWidth="400.0" styleClass="checkbox" stylesheets="@style.css" text="Count messages by month">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></CheckBox>
+      </VBox>
+   </AnchorPane>
+</VBox>
