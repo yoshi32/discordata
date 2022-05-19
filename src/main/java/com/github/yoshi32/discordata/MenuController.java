@@ -46,19 +46,19 @@ public class MenuController {
     }
 
     private void invalidFile() {
-        mainButton.setStyle("-fx-border-color: #F04747;");
+        mainButton.setStyle("-fx-border-color: #F04747");
         new ScheduledThreadPoolExecutor(1).schedule(() -> Platform.runLater(this::awaitFile), 800, TimeUnit.MILLISECONDS);
     }
 
     private void invalidFileData() {
         mainButton.setText("Invalid JSON File");
-        mainButton.setStyle("-fx-border-color: #F04747;");
+        mainButton.setStyle("-fx-border-color: #F04747");
         new ScheduledThreadPoolExecutor(1).schedule(() -> Platform.runLater(this::awaitFile), 800, TimeUnit.MILLISECONDS);
     }
 
     private void validFile(File file) {
 
-        mainButton.setStyle("-fx-border-color: #43B581;");
+        mainButton.setStyle("-fx-border-color: #43B581");
         new ScheduledThreadPoolExecutor(1).schedule(() -> mainButton.setStyle("-fx-border-color: #7289DA"), 800, TimeUnit.MILLISECONDS);
         mainButton.setText("Calculating ...");
         mainButton.setDisable(true);

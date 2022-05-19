@@ -3,7 +3,10 @@ package com.github.yoshi32.discordata;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -30,13 +33,16 @@ public class Discordata {
                         JSONObject jsonObject = new JSONObject(line);
                         String eventType = jsonObject.getString("event_type");
                         if (eventType.equals("data_request_initiated")) {
-                            long current = simpleDateFormat.parse(jsonObject.getString("timestamp")).getTime();
+                            String timestamp = jsonObject.getString("timestamp");
+                            if (timestamp.length() != 26) timestamp = new StringBuilder(timestamp).insert(20, ".000").toString();
+                            long current = simpleDateFormat.parse(timestamp).getTime();
                             if (current > max) max = current;
                         }
                         map.merge(eventType, 1L, (old, ignored) -> old + 1);
                     } catch (IOException | ParseException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
+                        e.printStackTrace();
                         cf.completeExceptionally(e);
                         break;
                     }
